@@ -1,24 +1,18 @@
 import React from "react";
-import { useTracker } from "meteor/react-meteor-data";
-import { Links } from "../collections/links";
+
+const styles = {
+  img: {
+    width: "400px",
+  },
+};
 
 const Info = () => {
-  const links = useTracker(() => {
-    return Links.find().fetch();
-  });
-
   return (
     <div>
-      <h2>Learn Meteor!</h2>
-      <ul>
-        {links.map((link) => (
-          <li key={link._id}>
-            <a href={link.url} target="_blank">
-              {link.title}
-            </a>
-          </li>
-        ))}
-      </ul>
+      <img src="/img/dome-logo-large.png" style={styles.img} />
+      <h1>A Sample Thing</h1>
+      <p>Let me tell you about this thing.</p>
+      <p>It is a handy thing.</p>
     </div>
   );
 };

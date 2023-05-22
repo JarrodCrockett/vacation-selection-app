@@ -1,19 +1,24 @@
 import React, { useState } from "react";
+import Grid from "@mui/material/Grid";
 import Info from "./Info";
+import SampleState from "./SampleState";
+import SampleDb from "./SampleDb";
+import Theme from "./Theme";
 
 const Home = () => {
-  const [counter, setCounter] = useState(0);
-
-  const increment = () => {
-    setCounter(counter + 1);
-  };
-
   return (
-    <div>
-      <button onClick={increment}>Click Me</button>
-      <p>You've pressed the button {counter} times.</p>
-      <Info />
-    </div>
+    <Theme>
+      <Grid container spacing={2}>
+        <Grid item md={3} />
+        <Grid item md={6} xs={12}>
+          <Info />
+          <hr />
+          <SampleState />
+          <SampleDb />
+        </Grid>
+        <Grid item md={3} />
+      </Grid>
+    </Theme>
   );
 };
 export default Home;
