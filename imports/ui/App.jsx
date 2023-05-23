@@ -8,7 +8,7 @@ export const App = () => (
   <Router>
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route element={<NotFound />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   </Router>
 );

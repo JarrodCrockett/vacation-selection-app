@@ -27,10 +27,10 @@ function createMuiTheme(darkMode) {
       }
       */
       primary: {
-        main: "#00396f", // ffin blue
+        main: "#1b75bc", // dome blue
       },
       secondary: {
-        main: "#c2082f", // ffin red
+        main: "#2bb673", // dome plant green
       },
       typography: {
         fontFamily: THEME_FONT,

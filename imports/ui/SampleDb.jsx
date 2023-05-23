@@ -2,7 +2,7 @@ import React from "react";
 import { useTracker } from "meteor/react-meteor-data";
 import { Links } from "../collections/links";
 
-const DbSample = () => {
+const SampleDb = () => {
   const links = useTracker(() => {
     return Links.find().fetch();
   });
@@ -22,4 +22,4 @@ const DbSample = () => {
     </div>
   );
 };
-export default DbSample;
+export default SampleDb;

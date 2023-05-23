@@ -5,10 +5,16 @@ import SampleState from "./SampleState";
 import SampleDb from "./SampleDb";
 import Theme from "./Theme";
 
+styles = {
+  grid: {
+    marginTop: "5px",
+  },
+};
+
 const Home = () => {
   return (
     <Theme>
-      <Grid container spacing={2}>
+      <Grid container spacing={2} style={styles.grid}>
         <Grid item md={3} />
         <Grid item md={6} xs={12}>
           <Info />
