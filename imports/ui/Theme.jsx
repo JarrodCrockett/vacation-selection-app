@@ -2,7 +2,7 @@ import React, { useState, useMemo, useEffect } from "react";
 import ThemeProvider from "@mui/material/styles/ThemeProvider";
 import createTheme from "@mui/material/styles/createTheme";
 import CssBaseline from "@mui/material/CssBaseline";
-//import './ThemeVars.css';
+import "./Theme.css";
 
 export const THEME_FONT = '"Quicksand", sans-serif';
 export const HEADLINE_FONT = '"Quicksand Bold", serif';
