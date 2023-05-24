@@ -36,7 +36,10 @@
     }
     gtag("js", new Date());
 
-    gtag("config", "G-5022C9MX7Q");
+    gtag("config", "G-5022C9MX7Q", {
+      cookie_domain: ".meteorapp.com",
+      cookie_flags: "SameSite=None;Secure",
+    });
   </script>
   <div id="react-target"></div>
 </body>
