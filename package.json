@@ -8,15 +8,15 @@
     "visualize": "meteor --production --extra-packages bundle-visualizer"
   },
   "dependencies": {
-    "@babel/runtime": "^7.17.9",
+    "@babel/runtime": "^7.22.5",
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
-    "@mui/material": "^5.13.2",
+    "@mui/material": "^5.13.5",
     "meteor-node-stubs": "^1.2.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router": "^6.11.2",
-    "react-router-dom": "^6.11.2"
+    "react-router-dom": "^6.13.0"
   },
   "meteor": {
     "mainModule": {
@@ -24,5 +24,13 @@
       "server": "server/main.js"
     },
     "testModule": "tests/main.js"
-  }
+  },
+  "description": "This template is meant to be used as a starting place for any app-like prototypes. To get started, you're going to create a new repo for your code and then add this repo as an upstream remote. That way you can automagically get any changes we get to the base template.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "author": "",
+  "license": "ISC"
 }

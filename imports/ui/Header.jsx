@@ -28,7 +28,7 @@ const Header = () => {
           style={theme.palette.mode === "dark" ? styles.logoDark : styles.logo}
         />
       </div>
-      <h1>A Sample Thing</h1>
+          <h1>Machine Learning RFP Checker</h1>
     </div>
   );
 };
