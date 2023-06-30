@@ -31,3 +31,5 @@ git push origin main
 This is a meteor app, so you'll need meteor js installed locally, and then you'll need to `meteor npm i`. To run the app, just `meteor` and then visit http://localhost:3000.
 
 When your app is ready, we'll deploy it to Meteor Galaxy via the GitHub repo and link it on our samples page on the dome.software site. We'll use one of their tiny Mongo dbs and adjust settings as necessary.
+
+Once the app is complete, modify the settings in .deploy/mup.js so that the application has a subdomain like foo.app.dome.software. Then I'll pull the app onto the server and deploy it using `mup`, and before long your app should be happily running on the internet!
