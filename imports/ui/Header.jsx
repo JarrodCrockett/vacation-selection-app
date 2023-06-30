@@ -24,9 +24,13 @@ const Header = () => {
   return (
     <div>
       <div style={styles.logoWrapper}>
-        <SvgLogo
-          style={theme.palette.mode === "dark" ? styles.logoDark : styles.logo}
-        />
+        <a href="https://dome.software">
+          <SvgLogo
+            style={
+              theme.palette.mode === "dark" ? styles.logoDark : styles.logo
+            }
+          />
+        </a>
       </div>
       <h1>A Sample Thing</h1>
     </div>
