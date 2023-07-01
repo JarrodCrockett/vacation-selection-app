@@ -1,15 +1,15 @@
-import React, { useState } from "react";
-import Grid from "@mui/material/Grid";
-import Info from "./Info";
-import SampleState from "./SampleState";
-import SampleDb from "./SampleDb";
-import Theme from "./Theme";
-import Header from "./Header";
-import Footer from "./Footer";
+import React, { useState } from 'react';
+import Grid from '@mui/material/Grid';
+import Info from './Info';
+import SampleState from './SampleState';
+import SampleDb from './SampleDb';
+import Theme from './Theme';
+import Header from './Header';
+import Footer from './Footer';
 
 styles = {
   grid: {
-    marginTop: "5px",
+    marginTop: '5px',
   },
 };
 

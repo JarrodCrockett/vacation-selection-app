@@ -1,9 +1,10 @@
 // a tweak of https://www.npmjs.com/package/react-embed-gist that handles importing different files
 // from the same gist on the same page.
 
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-const callbackName = (id, file) => `gist_callback_${id}_${file ? file.replace('.','') : ''}`;
+const callbackName = (id, file) =>
+  `gist_callback_${id}_${file ? file.replace('.', '') : ''}`;
 
 export default class LocalEmbedGist extends Component {
   constructor(props) {
@@ -11,8 +12,8 @@ export default class LocalEmbedGist extends Component {
 
     this.state = {
       loading: true,
-      title: "",
-      content: "",
+      title: '',
+      content: '',
     };
 
     this.handleNetworkErrors = this.handleNetworkErrors.bind(this);
@@ -32,7 +33,7 @@ export default class LocalEmbedGist extends Component {
      * The callbacks are going to be named as gist_callback_:ID where ID is the hash of the gist
      */
     const { gist, file } = this.props,
-      id = gist.split("/")[1];
+      id = gist.split('/')[1];
 
     if (!id)
       return this.setState({
@@ -43,10 +44,12 @@ export default class LocalEmbedGist extends Component {
     await this.setState({ loading: true });
     this.setupCallback(id, file);
 
-    const script = document.createElement("script");
-    let url = `https://gist.github.com/${gist}.json?callback=${encodeURIComponent(callbackName(id, file))}`;
+    const script = document.createElement('script');
+    let url = `https://gist.github.com/${gist}.json?callback=${encodeURIComponent(
+      callbackName(id, file)
+    )}`;
     if (file) url += `&file=${file}`;
-    script.type = "text/javascript";
+    script.type = 'text/javascript';
     script.src = url;
     script.onerror = (e) => this.handleNetworkErrors(e);
     document.head.appendChild(script);
@@ -64,9 +67,9 @@ export default class LocalEmbedGist extends Component {
   }
 
   setupCallback(id, file) {
-    console.log('creating callback', id, file, callbackName(id,file));
+    console.log('creating callback', id, file, callbackName(id, file));
     window[callbackName(id, file)] = function (gist) {
-        console.log('calling callback', id, file);
+      console.log('calling callback', id, file);
       /*
        * Once we call this callback, we are going to set description of gist as title and fill the content. We are
        * also going to set loading flag into false to render the content
@@ -94,9 +97,9 @@ export default class LocalEmbedGist extends Component {
        *       innerHMTL to be sure that we don't have any css loaded twice
        */
       if (document.head.innerHTML.indexOf(gist.stylesheet) === -1) {
-        let stylesheet = document.createElement("link");
-        stylesheet.type = "text/css";
-        stylesheet.rel = "stylesheet";
+        let stylesheet = document.createElement('link');
+        stylesheet.type = 'text/css';
+        stylesheet.rel = 'stylesheet';
         stylesheet.href = gist.stylesheet;
         document.head.appendChild(stylesheet);
       }
@@ -116,7 +119,7 @@ export default class LocalEmbedGist extends Component {
     if (this.state.loading) {
       return (
         <article className={loadingClass}>
-          {loadingFallback ? loadingFallback : "Loading ..."}
+          {loadingFallback ? loadingFallback : 'Loading ...'}
         </article>
       );
     } else if (this.state.error) {
