@@ -4,7 +4,7 @@ This template is meant to be used as a starting place for any app-like prototype
 
 To get started:
 
-1. Create a new empty repo on github in the domesoftware org. Name it using kebab-case.
+1. Create a new, empty, PRIVATE repo on github in the domesoftware org. Name it using kebab-case.
 1. Clone that repo locally
 1. Add this meteor-demo repo as an upstream remote:
 

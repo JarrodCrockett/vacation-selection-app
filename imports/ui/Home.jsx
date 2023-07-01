@@ -5,6 +5,7 @@ import SampleState from "./SampleState";
 import SampleDb from "./SampleDb";
 import Theme from "./Theme";
 import Header from "./Header";
+import Footer from "./Footer";
 
 styles = {
   grid: {
@@ -23,6 +24,7 @@ const Home = () => {
           <hr />
           <SampleState />
           <SampleDb />
+          <Footer />
         </Grid>
         <Grid item md={3} />
       </Grid>
