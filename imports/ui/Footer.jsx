@@ -40,9 +40,9 @@ const Footer = () => (
       <div>
         <Link href="tel:13252619612">1-325-261-9612</Link>
       </div>
-      <diV>
+      <div>
         <Link href="mailto:howdy@dome.software">howdy@dome.software</Link>
-      </diV>
+      </div>
     </Grid>
   </Grid>
 );
