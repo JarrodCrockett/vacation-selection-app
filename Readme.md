@@ -4,32 +4,16 @@ This template is meant to be used as a starting place for any app-like prototype
 
 To get started:
 
-1. Create a new, empty, PRIVATE repo on github in the domesoftware org. Name it using kebab-case.
-1. Clone that repo locally
-1. Add this meteor-demo repo as an upstream remote:
+1. Fork this repo. Name the fork using kebab-case.
+1. Clone your new repo locally.
+1. Change the SEO info in `client/main.html` head, like title and metadata.
+1. Make changes to `imports/ui/Home.jsx`. You can use Mongo (As shown in SampleDb) or not.
+1. If you need settings, like api keys etc, create a local settings.json file. It will be gitignored.
+1. If this is just a post, put its content in `imports/ui/Info.jsx`. Otherwise create a new component and add it to `Home.jsx`.
 
-```
-git remote add upstream git@github.com:domesoftware/meteor-demo.git
-```
+This is a meteor app, so you'll need node 14 and meteor js installed locally, and then you'll need to:
 
-1. Pull down the code from upstream:
+1. `meteor npm i`
+1. `meteor` and then visit http://localhost:3000.
 
-```
-git pull upstream main
-git checkout main
-```
-
-1. Change the SEO info in client/main.html head, like title and metadata.
-1. Make changes to Home.jsx. You can use Mongo (As shown in SampleDb) or not.
-1. If you need settings, like api keys etc, you can create a settings.json file.
-1. Push your new thing to your GitHub repo:
-
-```
-git push origin main
-```
-
-This is a meteor app, so you'll need meteor js installed locally, and then you'll need to `meteor npm i`. To run the app, just `meteor` and then visit http://localhost:3000.
-
-When your app is ready, we'll deploy it to Meteor Galaxy via the GitHub repo and link it on our samples page on the dome.software site. We'll use one of their tiny Mongo dbs and adjust settings as necessary.
-
-Once the app is complete, modify the settings in .deploy/mup.js so that the application has a subdomain like foo.app.dome.software. Then I'll pull the app onto the server and deploy it using `mup`, and before long your app should be happily running on the internet!
+Once the app is complete, modify the settings in .deploy/mup.js so that the application has a subdomain like foo.app.dome.software. Then I'll pull the app onto the server and deploy it using `mup`, and before long your app will be happily running on the internet!
