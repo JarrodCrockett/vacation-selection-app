@@ -6,6 +6,9 @@ import SampleDb from './SampleDb';
 import Theme from './Theme';
 import Header from './Header';
 import Footer from './Footer';
+import CustomDay from './Calendar';
+import BasicTable from './Table';
+import { Stack } from '@mui/material';
 
 styles = {
   grid: {
@@ -20,10 +23,18 @@ const Home = () => {
         <Grid item md={3} />
         <Grid item md={6} xs={12}>
           <Header />
-          <Info />
+        </Grid>
+        <Grid item md={3} />
+        <Grid item md={1} />
+        <Grid item md={3} xs={12} sm={12}>
+          <CustomDay />
+        </Grid>
+        <Grid item md={6} xs={12} sm={6}>
+          <BasicTable />
+        </Grid>
+        <Grid item md={3} sm={3}/>
+        <Grid item md={6} xs={12} sm={12}>
           <hr />
-          <SampleState />
-          <SampleDb />
           <Footer />
         </Grid>
         <Grid item md={3} />

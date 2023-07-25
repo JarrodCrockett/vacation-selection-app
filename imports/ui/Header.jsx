@@ -32,7 +32,7 @@ const Header = () => {
           />
         </a>
       </div>
-      <h1>A Sample Thing</h1>
+      <h1>Calendar App</h1>
     </div>
   );
 };
